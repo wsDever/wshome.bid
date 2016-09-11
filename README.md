@@ -4,8 +4,8 @@ wshome.bid
 ### 项目基础
 		nodejs + angularjs + requirejs + less
 ### 学习流程
-首先把项目cloen下来，然后命令行进入要目录，执行：<br />
-		npm install 
-安装所需要的依赖，然后执行：<br />
+###### 首先把项目cloen下来，然后命令行进入要目录，执行：
+		npm install 			
+###### 安装所需要的依赖，然后执行：
 		gulp server 
 
