@@ -7,7 +7,12 @@ define(['require', 'pub/js/app'],function(require,app){
 				"views":{
 					'':{
 						templateUrl:"pub/tpls/index.html",
-						controller:""
+						controller:"",
+						resolve:{
+							load:function(){
+								alert(0);
+							}
+						}
 					},
 					"topbar@index":{
 						templateUrl:"pub/tpls/topbar.html",
