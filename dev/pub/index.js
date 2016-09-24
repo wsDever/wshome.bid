@@ -9,6 +9,7 @@
 			"angular" : "lib/angular.min",
 			"pintuer" : "lib/pintuer.min",
 			"angular-ui-router" : "lib/angular-ui-router.min",
+			"angular-async-loader" : "lib/angular-async-loader.min",
 			"respond" : "lib/respond"
 		},
 		// 配置依赖的文件包名
@@ -17,8 +18,13 @@
 	            exports:"angular"
 	        },
 	        "angular-ui-router":{
-	            exports:"angular-ui-router"
-	        }
+	        	deps:['angular'],
+	            // exports:"angular-ui-router"
+	        },
+	        // "angular-async-loader":{
+	        // 	// deps:'angular',
+	        //     exports:"angular-async-loader"
+	        // }
 	    },
 	    // 最基础的依赖，会首先加载
 	    deps:["jquery","pintuer"]
@@ -31,6 +37,7 @@
 		// 注意：手动启动angular 时不能在index.html中再添加ng-app
         angular.element(document).ready(function() {
 	        angular.bootstrap(document, ['wsWeb']);
+	        angular.element(document).find('html').addClass('ng-app');
 	    });
     });
 // })
