@@ -1,22 +1,20 @@
-define(['require', 'pub/js/app'],function(require,app){
-	return app.web.config(function($stateProvider,$urlRouterProvider) {
+define(['pub/js/app'],function(app){
+	app.config(function($stateProvider,$urlRouterProvider) {
 		$urlRouterProvider.otherwise('/index');
 		$stateProvider
 			.state("index",{
-				"url":"/index",
-				"views":{
+				url:"/index",
+				views:{
 					'':{
 						templateUrl:"pub/tpls/index.html",
-						controller:"",
-						resolve:{
-							load:function(){
-								alert(0);
-							}
-						}
+						controllerUrl:"pub/js/controls/mainCtrl",
+                		controller: 'mainRootCtrl'
 					},
 					"topbar@index":{
 						templateUrl:"pub/tpls/topbar.html",
-						controller:""
+						controllerUrl:"pub/js/controls/topbarCtrl",
+                		controller: 'topbarCtrl'	
+						
 					},
 					"menu@index":{
 						templateUrl:"pub/tpls/menu.html",
@@ -27,7 +25,7 @@ define(['require', 'pub/js/app'],function(require,app){
 						controller:""
 					},
 					"main@index":{
-						// templateUrl:"res/mainTpls/main.html",
+						templateUrl:"pub/tpls/main.html",
 						// controller:"dfCtrl"
 					},
 					"footer@index":{
