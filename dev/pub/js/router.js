@@ -1,4 +1,4 @@
-define(['pub/js/app'],function(app){
+define(['pub/js/app','respond'],function(app){
 	app.config(function($stateProvider,$urlRouterProvider) {
 		$urlRouterProvider.otherwise('/index');
 		$stateProvider
@@ -10,32 +10,33 @@ define(['pub/js/app'],function(app){
 						controllerUrl:"pub/js/controls/mainCtrl",
                 		controller: 'mainRootCtrl'
 					},
-					"topbar@index":{
-						templateUrl:"pub/tpls/topbar.html",
-						controllerUrl:"pub/js/controls/topbarCtrl",
-                		controller: 'topbarCtrl'	
+					// "topbar@index":{
+					// 	templateUrl:"pub/tpls/topbar.html",
+					// 	controllerUrl:"pub/js/controls/topbarCtrl",
+     //            		controller: 'topbarCtrl'	
 						
-					},
-					"menu@index":{
-						templateUrl:"pub/tpls/menu.html",
-						controller:""
-					},
-					"banner@index":{
-						templateUrl:"pub/tpls/banner.html",
-						controller:""
-					},
-					"main@index":{
-						templateUrl:"pub/tpls/main.html",
-						// controller:"dfCtrl"
-					},
-					"footer@index":{
-						templateUrl:"pub/tpls/footer.html",
-						controller:""
-					},
-					"footbar@index":{
-						templateUrl:"pub/tpls/footbar.html",
-						controller:""
-					}
+					// },
+					// "menu@index":{
+					// 	templateUrl:"pub/tpls/menu.html",
+					// 	controllerUrl:"pub/js/controls/menuCtrl",
+					// 	controller:"menuCtrl"
+					// },
+					// "banner@index":{
+					// 	templateUrl:"pub/tpls/banner.html",
+					// 	controller:""
+					// },
+					// "main@index":{
+					// 	templateUrl:"pub/tpls/main.html",
+					// 	controller:""
+					// },
+					// "footer@index":{
+					// 	templateUrl:"pub/tpls/footer.html",
+					// 	controller:""
+					// },
+					// "footbar@index":{
+					// 	templateUrl:"pub/tpls/footbar.html",
+					// 	controller:""
+					// }
 				}
 			})
 			.state("index.default",{

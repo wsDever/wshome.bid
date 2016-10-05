@@ -5,9 +5,9 @@
 		baseUrl : baseUrl  ,
 		// 配置js库及js文件路径
 		paths : {
-			"jquery" : "http://cdn.bootcss.com/jquery/3.0.0/jquery.min",
+			"jquery":"lib/jquery-3.1.0.min",
+			// "pintuer" : "lib/pintuer",
 			"angular" : "lib/angular.min",
-			"pintuer" : "lib/pintuer.min",
 			"angular-ui-router" : "lib/angular-ui-router.min",
 			"angular-async-loader" : "lib/angular-async-loader.min",
 			"respond" : "lib/respond"
@@ -19,15 +19,11 @@
 	        },
 	        "angular-ui-router":{
 	        	deps:['angular'],
-	            // exports:"angular-ui-router"
-	        },
-	        // "angular-async-loader":{
-	        // 	// deps:'angular',
-	        //     exports:"angular-async-loader"
-	        // }
+	            exports:"angular-ui-router"
+	        }
 	    },
-	    // 最基础的依赖，会首先加载
-	    deps:["jquery","pintuer"]
+	    // 最基础的依赖，会先加载
+	    deps:["jquery"]
 	}
 
 	require.config(config);

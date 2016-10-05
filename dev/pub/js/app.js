@@ -8,5 +8,6 @@ define(function (require, exports, module) {
 
     asyncLoader.configure(app);
 
-    module.exports = app;
+    // module.exports = app;
+    return app ;
 });

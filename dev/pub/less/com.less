@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;  
+    box-sizing: border-box;
+}
+.mainindex{
+.header{
+    position: absolute;
+    z-index: 10;
+    right:0;
+    top:20px;
+    right: 20px;
+    background: transparent;
+}
+
+.menu_idx,.sbtn{
+    display: inline-block;
+    background-color:#93D7D7;
+    width:40px;
+    height:40px;
+    line-height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+}
+.sbtnsted{
+    color:#333;
+    font-weight: bold;
+}
+
+.selected{
+    color:#2AC2A9;
+}
+.canvasbox{
+    left:0px;
+    width:100%;  
+    top:0px; 
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+.menubg{
+    position: absolute;
+    z-index: 5 ;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    // bottom: 100%;
+    opacity: 0;
+     -webkit-transition:all .5s ease 0; 
+    transition:all .5s ease 0; 
+}
+.menubg_on{
+    // bottom: 0 ;
+    opacity: 1 ;
+}
+.circle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+.circle div{
+    width:100px;
+    height: 100px;
+   
+    position: absolute;
+    border-radius: 50%;
+    
+    line-height: 100px;
+    text-align: center;
+
+}
+@init-top:0px;
+@cir-gap:50px;
+@init-left:50px;
+.init-left(@i)
+{
+    left:calc(~"50% -"  @cir-gap * @i ~"-" (@i * 2 + 1) * 50px) ;
+}
+@end-top:calc(~"50% - 50px");
+.anim-pro(@t){
+    opacity: 0;
+    -webkit-transition:all .5s ease @t; 
+    transition:all .5s ease @t; 
+    z-index: 9;
+}
+.about{
+    background-color: #ff0;
+    top:@init-top;
+    .init-left(-1);
+    .anim-pro(0.1s);
+}
+.about_on{
+    top:@end-top;
+    opacity: 1;  
+}
+
+.blog{
+    background-color: #f0f;
+     top:@init-top;
+    // left: @init-left;
+    .init-left(2);
+   .anim-pro(0.2s);
+}
+
+.blog_on{
+    top:@end-top;
+    opacity: 1;
+}
+
+.github{
+    background-color: #00f; 
+    top:@init-top;
+    // left: calc(~"150px +" @init-left);
+    .init-left(1);
+
+   .anim-pro(0.3s);     
+}
+
+.github_on{
+    top:@end-top;
+    opacity: 1;
+}
+
+.info{
+    background-color: #0ff; 
+    top:@init-top;
+    .init-left(0);
+    .anim-pro(0.4s);
+}
+.info_on{
+    top:@end-top;
+    opacity: 1;
+}
+
+
+
+.other{
+    background-color: #15f; 
+    top:@init-top;
+    .init-left(-2);
+   .anim-pro(0.5s);
+}
+.other_on{
+    top:@end-top;
+    opacity: 1;
+}
+
+
+}
