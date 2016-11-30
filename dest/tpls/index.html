@@ -1,0 +1,18 @@
+<div class="mainindex">
+	<div class="header">			
+		<div class="menu_idx">菜单</div>
+		<div class="sbtn sbtnsted" tp="circle">圆环</div>
+		<div class="sbtn" tp="ball">球状</div>
+	</div>
+
+	<div class="canvasbox">
+		<canvas id="canvas" width="600">
+			当前浏览器不支持Html5，请更换后再试！
+		</canvas>
+	</div>
+	<div class="menubg">
+		<div class="circle">
+			<div menus ng-repeat="menu in menus" menu-class="{{menu.class}}" menu-url="{{menu.url}}" menu-name="{{menu.name}}"></div>
+		</div>
+	</div>
+</div>

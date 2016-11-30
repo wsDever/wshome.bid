@@ -1,0 +1,43 @@
+.blog-site,.github-site{
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	.bg{
+		background: url(../images/blog.jpg) no-repeat;
+		background-size: 100% 100%;
+		// position: relative;
+		height: 100%;
+		width: 100%;
+		text-align: center;
+		padding-top:200px;
+	}
+	.web-site{
+		margin-top: 20px;
+		a{
+			color:#fff;
+			font-size: 16px;
+			display: inline-block;
+			border-radius: 20px;
+			height: 40px;
+			line-height: 40px;
+			width: 150px;
+			background: red;
+			cursor: pointer;
+			&:nth-child(1){
+				margin-right:20px;
+			}
+		}
+	}
+	.web-doc{
+		margin-left: calc(~"50% - 200px");
+		width: 400px;
+		text-align: left;
+		margin-top: 20px;
+		font-size: 14px;
+		color:red;
+		p{
+			margin-left: 60px;
+			line-height: 25px;
+		}
+	}
+}

@@ -1,0 +1,53 @@
+define(['app','respond'],function(app){
+	app.config(function($stateProvider,$urlRouterProvider) {
+		$urlRouterProvider.otherwise('/index');
+		$stateProvider
+			.state("index",{
+				url:"/index",
+				'views':{
+					'':{
+						templateUrl:"tpls/index.html",
+						controllerUrl:"controls/mainCtrl",
+                		controller: 'mainRootCtrl'
+					}
+					
+				}
+			})
+			.state("resume",{
+				url:"/resume",
+				"views":{
+					"":{
+						templateUrl:"tpls/resume.html",
+						controllerUrl:"controls/resumeCtrl",
+						controller:'resumeCtrl'
+					}
+				}
+			})
+			.state("about",{
+				url:"/about",
+				"views":{
+					"":{
+						templateUrl:"tpls/about.html",
+						controllerUrl:"controls/aboutCtrl",
+						controller:'aboutCtrl'
+					}
+				}
+			})
+			.state("blog",{
+				url:"/blog",
+				"views":{
+					"":{
+						templateUrl:"tpls/blog.html"
+					}
+				}
+			})
+			.state("github",{
+				url:"/github",
+				"views":{
+					"":{
+						templateUrl:"tpls/github.html"
+					}
+				}
+			})
+	})
+})
